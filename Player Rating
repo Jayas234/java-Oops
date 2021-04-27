@@ -1,0 +1,32 @@
+abstract class Player {
+
+   String firstName;
+   String lastName;
+
+   Player(String firstName, String lastName) {
+      this.firstName = firstName;
+      this.lastName = lastName;
+   }
+
+   public String getFirstName() {
+      return firstName;
+   }
+
+   public String getLastName() {
+      return lastName;
+   }
+
+   public String getName() {
+      return getFirstName() + " " + getLastName();
+   }
+
+   public abstract int getRating();
+}
+
+class CricketPlayer extends Player {
+   double avaerageRuns;
+
+   CricketPlayer(String firstName, String lastName, double averageRuns) {
+      super(firstName, lastName);
+      this.avaerageRuns = averageRuns;
+   }
